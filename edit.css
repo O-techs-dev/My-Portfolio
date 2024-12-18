@@ -1,12 +1,15 @@
-*{
-    padding: 0px;
+ *{
+    padding: 2px;
     margin: 0px 0px;  
 }
 body{
    min-height: 100vh;
-   background-color: rgba(3, 1, 24, 0.932);
+   background-color: rgb(3, 1, 19);
+   color: white;
+   text-align: justify;
    
 }
+
 body.dark-mode {
     background-color: #202020;
     color: white;
@@ -87,11 +90,14 @@ button{
         background-color: red;
         padding: 10px 10px;
         font-weight: bolder;
+        cursor: pointer;
         box-sizing: border-box;
         border-radius: 10px;
-        box-shadow: 0px 5px 0px rgba(214, 10, 10, 0.288);
-        border-color: rgba(224, 9, 9, 0.274);
         position: relative;
+        box-shadow: 5px 5px 5px rgba(214, 10, 10, 0.288);
+        font-weight: bolder;
+        border-color: rgba(224, 9, 9, 0.274);
+       transition: box-shadow 0.3s ease;
 }
 .r2{
     font-weight: bolder;
@@ -104,7 +110,7 @@ button{
   line-height: normal;
 }
 .p-photo{
-  width: 50px;
+  width: 100px;
   border-radius: 50%;
 }
 .line1{
@@ -114,16 +120,20 @@ button{
 .emoji{
   width: 10px;
 }
+.divi{
+  color:rgba(161, 161, 161, 0.486) ;
+}
 .line2{
   font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
   color: rgb(150, 150, 150);
+  font-size: 30px;
 }
 .line3{
   text-align: justify ;
   padding: 10px;
   color: rgba(161, 161, 161, 0.486);
   text-align: center;
-  font-size: 10px;
+  font-size: 12px;
   line-height: normal;
 }
 .b1{
@@ -136,22 +146,109 @@ button{
   background-color: rgb(255, 0, 0);
   padding: 5px 5px;
   box-sizing: border-box;
+  cursor: pointer;
   border-radius: 10px;
-  box-shadow: 0px 5px 0px rgba(214, 10, 10, 0.288);
+  box-shadow: 5px 5px 5px rgba(214, 10, 10, 0.288);
   font-weight: bolder;
   border-color: rgba(224, 9, 9, 0.274);
+  transition: box-shadow 0.3s ease;
 }
 .out{
   font-weight: bolder;
   font-size: 8px;
   color: white;
 }
-
-
-@media (min-width: 425px) {
-  body{
-    font-size: xx-large;
+.snd-pg{
+  text-align: justify;
+}
+.line2-1{
+  font-size: large;
+}
+.line2-2{
+  color: rgba(161, 161, 161, 0.486);
+  font-size: small;
+}
+.line2-3{
+  color: rgba(161, 161, 161, 0.486);
+  font-size: small;
+  padding-top: 20px;
+}
+.line2-4{
+  color: rgba(161, 161, 161, 0.486);
+  font-size: small;
+  padding-top: 5px;
+}
+.b2{
+  color: red;
+}
+.bottom-line{
+  border-style:inset;
+  border-width: 1px ;
+  border-color:rgba(161, 161, 161, 0.486); 
+  border-top: none;
+  border-right: none;
+  border-left: none;
+}
+.line3-1{
+  color: rgb(192, 188, 188);
+}
+.line3-2{
+  color:rgba(161, 161, 161, 0.486); 
+  display: flex;
+  font-size: small;
+}
+.tab{
+  position: relative;
+  left: 40px;
+}
+.line3-3{
+  color:rgba(161, 161, 161, 0.486); 
+  display: flex;font-size: small;
+}
+.tab2{
+  position: relative;
+  left: 17px;
+}
+.dp{
+  width: 100px;
+  padding-right: 100px;
+  padding-left: 100px;
+}
+.line4-2{
+  color:rgba(161, 161, 161, 0.486); 
+  font-size: small;
+}
+.logo{
+  padding: 20px;
+ display: flex;
+ justify-content: center;
+ align-items: center;
+ gap: 50px;
+}
+.logo-img{
+  max-width: 100px;
+  display: block;
+}
+.logo-img2{
+  display: block;  
+  max-width: 100px;
+}
+footer{
+  text-align: center;
+  background-color: black;
+  color:rgba(161, 161, 161, 0.486); 
+  padding: 20px;
+  font-size: smaller;
+  position: relative;
+  bottom: 0;
+}
+@media (min-width: 375px) {
+  .logo{
+    padding: 0px 100px;
   }
+}
+@media (min-width: 425px) {
+  
   .sidebar li{
     font-size: medium;
     }
@@ -161,6 +258,15 @@ button{
   .line1{
     font-size: small;
   }
+  .dp{
+    padding-left: 150px;
+  }
+  .line3-4{
+    position: relative;
+    bottom: 75px;
+    float: right;
+  }
+
 }
 
 @media (min-width: 640px){
@@ -173,11 +279,21 @@ button{
   .sidebar{
     width: 210px;
   }
-
+  
+  .dp{
+    left: 100px;
+  }
+  .line3-4{
+    bottom: 75px;
+  }
+  .logo{
+    gap: 100px;
+  }
 }
 @media (min-width: 768px) {
-    
     body{
+      margin: 70px;
+      margin-top: 0px;
         color: white;
         font-size: 15px;
       }
@@ -188,7 +304,7 @@ button{
         color: rgba(255, 255, 255, 0.712);
         padding: 0 15px;
       }
-       
+            
      .menu-btn{
         display: none;
      }
@@ -221,5 +337,14 @@ button{
     .out{
       font-size: small;
     }
- 
+    .divi{
+      display: none;
+    }
+    .line3-4{
+      bottom: 75px;
+      float: right;
+    }
+    .logo{
+      gap: 100px;
+    }
 }
